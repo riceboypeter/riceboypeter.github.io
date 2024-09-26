@@ -1,9 +1,19 @@
-body {
-    background-color: black;
-    color: white;
+* {
+    cursor: none;
 }
 
-.light-mode {
-    background-color: white;
-    color: black;
+body {
+    background-color: #171717;
+    overflow: hidden;
+    margin: 0;
+}
+
+.custom-cursor {
+    width: 20px; /* Size of the custom cursor */
+    height: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: fixed; /* Fixed position to track the viewport */
+    pointer-events: none; /* Ensure it doesn’t block interactions */
+    transform: translate(-50%, -50%); /* centre the cursor */
 }
