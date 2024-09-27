@@ -1,14 +1,27 @@
+.noto-sans-mono-typeface {
+    font-family: "Noto Sans Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
 * {
     cursor: none;
 }
 
 body {
-    background-color: #171717;
-    overflow: hidden;
+    background-color: rgb(150, 150, 150); /*171717*/
     margin: 0;
+    font-family: "Noto Sans Mono", monospace;
 }
 
-.custom-cursor {
+.content {
+    height: 2000px;
+}
+
+#custom-cursor {
     width: 20px; /* Size of the custom cursor */
     height: 20px;
     border: 2px solid #fff;
@@ -17,3 +30,84 @@ body {
     pointer-events: none; /* Ensure it doesn’t block interactions */
     transform: translate(-50%, -50%); /* centre the cursor */
 }
+
+#navbar {
+    background-color: #171717;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: top 0.5s;
+}
+
+#navbar img {
+    float: left;
+    padding-top: 10px;
+    width: 40px; /* Adjust the size of logo */
+    height: 40px;
+    margin-left: 20px; /* Some space from the edge */
+    transition: 0.7s;
+}
+
+#navbar img:hover {
+    content: url('resources/dimple-turn.gif'); /* Replace with your alternate image */
+}
+
+#navbar a.nav-button {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 30px 20px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+#navbar #nav-buttons {
+    float: right;
+    margin-left: 30px;
+
+}
+
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+#down-arrow {
+    position: absolute;
+    top: calc(100vh - 80px);
+    left: calc(50% - 14px);
+    width: 0;
+    height: 30px;
+    border: 2px solid;
+    border-radius: 2px;
+    animation: jumpInfinite 1.5s infinite;
+    transition: opacity 0.5s ease-in-out; /* Smooth hiding */
+}
+
+#down-arrow:after {
+    content: " ";
+    position: absolute;
+    top: 12px;
+    left: -10px;
+    width: 16px;
+    height: 16px;
+    border-bottom: 4px solid;
+    border-right: 4px solid;
+    border-radius: 4px;
+    transform: rotateZ(45deg);
+}
+
+@keyframes jumpInfinite {
+    0% {
+        margin-top: 0;
+    }
+    50% {
+        margin-top: 20px;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+
+
