@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const mainContent = document.getElementById('main-content');
     const messages = [
         'GET /profile HTTP/1.1',
-        'Host: riceboypeter.github.io',
+        'Host: peterplatypus.github.io',
         '...',
         'HTTP/1.1 200 OK',
         'Fetching profile...'
